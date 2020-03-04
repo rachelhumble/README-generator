@@ -65,15 +65,16 @@ function generateREADME(answers) {
 # **${answers.title}**
 *${answers.description}*
 
-### Table of contents: 
-*${answers.tableOfContents}*
+## Table of contents: 
+${answers.tableOfContents}
 
-## Installation: ${answers.installation}
+### Installation: 
+${answers.installation}
 Usage: ${answers.usage}
-License: ${answers.license}
-Contributors: ${answers.contributing}
-Tests: ${answers.tests}
-Questions: >${answers.questions}
+\nLicense: ${answers.license}
+\nContributors: ${answers.contributing}
+\nTests: ${answers.tests}
+\nQuestions: >${answers.questions}
 `;
 }
 
@@ -84,8 +85,8 @@ async function generateGithubInfo(username) {
     const ghEmail = res.data.email;
 
     return `
-    **Created by: ${ghEmail}** 
-    <img src="${ghImg}" height="80" width="80">`;
+    \n**Created by: ${ghEmail}** 
+    <img src="${ghImg}" height="100" width="100">`;
 }   
 
 async function init() {
