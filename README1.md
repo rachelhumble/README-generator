@@ -6,17 +6,19 @@
 1. One 2. Two 3. Three
 
 ### Installation: 
-Instructions...
-Usage: Usage...
+TBD
 
-License: whatever
+Usage: Here's how
+
+License: v1.0
 
 Contributors: Rachel Humble
 
 Tests: N/A
 
-Questions: >N/A
+Questions: Q?
 
     
 **Created by: null** 
-    <img src="https://avatars2.githubusercontent.com/u/58493428?v=4" height="100" width="100">
+    
+<img src="https://avatars2.githubusercontent.com/u/58493428?v=4" height="150" width="150">

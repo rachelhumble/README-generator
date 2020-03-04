@@ -70,11 +70,11 @@ ${answers.tableOfContents}
 
 ### Installation: 
 ${answers.installation}
-Usage: ${answers.usage}
+\nUsage: ${answers.usage}
 \nLicense: ${answers.license}
 \nContributors: ${answers.contributing}
 \nTests: ${answers.tests}
-\nQuestions: >${answers.questions}
+\nQuestions: ${answers.questions}
 `;
 }
 
@@ -86,7 +86,7 @@ async function generateGithubInfo(username) {
 
     return `
     \n**Created by: ${ghEmail}** 
-    <img src="${ghImg}" height="100" width="100">`;
+    \n<img src="${ghImg}" height="150" width="150">`;
 }   
 
 async function init() {
