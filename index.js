@@ -58,6 +58,9 @@ function promptUser() {
         message: "Questions: "
     }
   ])
+  // .then(data => {
+  //   console.log(data)
+  // })
 //   ]).then(function({username}) {
 //     const queryUrl = `https://api.github.com/users/${username}`;
 //     console.log(queryUrl);
@@ -73,14 +76,13 @@ function promptUser() {
 
 function generateREADME(answers) {
   return `
-${answers.title}
-
+# ${answers.title}
 ${answers.description}
 
-Table of contents: 
-${answers.tableOfContents}
+### Table of contents: 
+*${answers.tableOfContents}*
 
-Installation: ${answers.installation}
+## Installation: ${answers.installation}
 Usage: ${answers.usage}
 License: ${answers.license}
 Contributors: ${answers.contributing}
@@ -89,21 +91,32 @@ Questions: ${answers.questions}
 `;
 }
 
-function generateGithubInfo({ username }) {
+async function generateGithubInfo(username) {
     const queryUrl = `https://api.github.com/users/${username}`;
-    console.log(queryUrl);
-    axios
-        .get(queryUrl).then(function(res) {
-            const ghImg = res.data.avatar_url;
-            const ghEmail = res.data.email
-            return `Created by ${ghEmail} <img src=${ghImg}>`;
-        });
+    // console.log(queryUrl);
+    const res = await axios.get(queryUrl);
+    // console.log(res)
+
+    const ghImg = res.data.avatar_url;
+    const ghEmail = res.data.email;
+
+    return `### Created by: ${ghEmail} <img src="${ghImg}">`;
+    // axios
+    //     .get(queryUrl).then(function(res) {
+    //         // const ghData = function(res) {
+    //         //   return res.data.email;
+    //         // }
+    //         // return res.data.email;
+    //     });
+      // console.log("github?", ghData);
+      
 }   
 
 async function init() {
   try {
     const answers = await promptUser();
-    const github = generateGithubInfo(answers);
+    const github = await generateGithubInfo(answers.username);
+    console.log("GITHUB INFO: ", github);
     const readme = generateREADME(answers);
 
     await writeFileAsync("README1.md", readme);
