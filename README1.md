@@ -1,22 +1,22 @@
 
-# **Title**
-*Description..*
+# **Project Title**
+*Description goes here*
 
 ## Table of contents: 
-1. One 2. Two 3. Three
+1.One 2.Two 3.Three
 
 ### Installation: 
-TBD
+This is how...
 
-Usage: Here's how
+Usage: Directions for usage
 
-License: v1.0
+License: License XYZ
 
-Contributors: Rachel Humble
+Contributors: Rachel Humble 
 
-Tests: N/A
+Tests: No tests available
 
-Questions: Q?
+Questions: Qs?
 
     
 **Created by: null** 
